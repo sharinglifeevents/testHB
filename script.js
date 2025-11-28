@@ -1,22 +1,31 @@
+function shuffleArray(array) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 const questions = [
   {
     text: "Какое настроение у тебя бывает чаще?",
     img: "img/obl/nastr.png",
-    options: [
+    options: shuffleArray([
       { text: "Можно горы свернуть, или хотя бы посуду помыть очень энергично", type: "sport" },
       { text: "Лучше не подходи, не трогай и не дыши в мою сторону", type: "angry" },
       { text: "Happy happy happy", type: "happy" },
-      { text: "ХХочется сделать какую-нибудь пакость", type: "annoying" },
+      { text: "Хочется сделать какую-нибудь пакость", type: "annoying" },
       { text: "Твой шок в шоке от окружающий тебя событий", type: "wonder" },
       { text: "Мозг отключился, единственная цель — добраться до подушки", type: "sleepy" },
       { text: "Бараш позавидует твоему вдохновению и желанию творить", type: "creative" },
       { text: "Бродить в пальто, заправлять волосы за ухо и быть не такой как все", type: "hoahoahoa" }
-    ]
+    ])
   },
   {
     text: "Выбери напиток",
     img: "img/obl/napitok.jpg",
-    options: [
+    options: shuffleArray([
       { text: "Водичка с лимоном", type: "sport" },
       { text: "Энергетик", type: "angry" },
       { text: "Пивка для рывка", type: "happy" },
@@ -25,12 +34,12 @@ const questions = [
       { text: "Ромашковый чай", type: "sleepy" },
       { text: "Матча латте", type: "creative" },
       { text: "Тыквенный раф с корицей", type: "hoahoahoa" }
-    ]
+    ])
   },
   {
     text: "Какая была бы твоя суперсила?",
     img: "img/obl/sm.png",
-    options: [
+    options: shuffleArray([
       { text: "Суперскорость, чтобы везде успевать и быть в тонусе", type: "sport" },
       { text: "Лазерный взгляд, испепеляющий врагов и попкорн", type: "angry" },
       { text: "Умение летать", type: "happy" },
@@ -39,12 +48,12 @@ const questions = [
       { text: "Умение засыпать на 10 минут с эффектом 8-часового сна", type: "sleepy" },
       { text: "Умение превращать сны в готовые сценарии для блокбастеров", type: "creative" },
       { text: "Бессмертие", type: "hoahoahoa" }
-    ]
+    ])
   },
   {
     text: "Твое типичное утро",
     img: "img/obl/utro.png",
-    options: [
+    options: shuffleArray([
       { text: "Легкая разминка и водичка с лимоном натощак", type: "sport" },
       { text: "Ненавижу утро", type: "angry" },
       { text: "Бодрость и уверенность в том, день уже хороший", type: "happy" },
@@ -53,12 +62,12 @@ const questions = [
       { text: "Еще 5 минуточек", type: "sleepy" },
       { text: "Пересказываю сон про говорящего коня с джедайским мечом", type: "creative" },
       { text: "Гляжу в окно с чашкой кофе", type: "hoahoahoa" }
-    ]
+    ])
   },
   {
     text: "С каким погодным явлением ты себя ассоциируешь?",
     img: "img/obl/pogoda.png",
-    options: [
+    options: shuffleArray([
       { text: "Теплый ветер с солнце", type: "sport" },
       { text: "Ураган с градом", type: "angry" },
       { text: "Яркое солнце на безоблачном небе", type: "happy" },
@@ -67,12 +76,12 @@ const questions = [
       { text: "Тихий снегопад", type: "sleepy" },
       { text: "Иней на окне", type: "creative" },
       { text: "Осенний сумеречный дождь", type: "hoahoahoa" }
-    ]
+    ])
   },
   {
     text: "Выбери сериал",
     img: "img/obl/serZ.png",
-    options: [
+    options: shuffleArray([
       { text: "Игра в кальмара", type: "sport" },
       { text: "Тетрадь смерти", type: "angry" },
       { text: "Друзья", type: "happy" },
@@ -81,12 +90,12 @@ const questions = [
       { text: "Шерлок", type: "sleepy" },
       { text: "Меломанка", type: "creative" },
       { text: "Дневники вампира", type: "hoahoahoa" }
-    ]
+    ])
   },
   {
     text: "Выбери досуг",
     img: "img/obl/dosug.jpg",
-    options: [
+    options: shuffleArray([
       { text: "Спортзал", type: "sport" },
       { text: "Уборка с размахом", type: "angry" },
       { text: "Настолки в большой компании", type: "happy" },
@@ -95,12 +104,12 @@ const questions = [
       { text: "Сон", type: "sleepy" },
       { text: "Организовать фотоссесию", type: "creative" },
       { text: "Прогулка под луной", type: "hoahoahoa" }
-    ]
+    ])
   },
   {
     text: "Ты просыпаешься и понимаешь, что стала растением. Каким?",
     img: "img/obl/rast.png",
-    options: [
+    options: shuffleArray([
       { text: "Алоэ", type: "sport" },
       { text: "Венерина мухоловка", type: "angry" },
       { text: "Подсолнух", type: "happy" },
@@ -109,12 +118,12 @@ const questions = [
       { text: "Мак", type: "sleepy" },
       { text: "Гипсофила", type: "creative" },
       { text: "Лаванда", type: "hoahoahoa" }
-    ]
+    ])
   },
   {
     text: "На город напали монстры, выбери, чем будешь обороняться",
     img: "img/obl/monster.jpg",
-    options: [
+    options: shuffleArray([
       { text: "Гантеля 10кг", type: "sport" },
       { text: "Я сама стану монстром, так проще", type: "angry" },
       { text: "Подружусь с монстрами", type: "happy" },
@@ -123,54 +132,54 @@ const questions = [
       { text: "Спрячусь под одеялом", type: "sleepy" },
       { text: "Расставлю сложные капканы", type: "creative" },
       { text: "Древней магией", type: "hoahoahoa" }
-    ]
+    ])
   },
   {
-  text: "Выбери мем",
-  img: "img/obl/mem.png",
-  options: [
-    { 
-      text: "", 
-      type: "sport",
-      img: "img/meme/press.jpeg" 
-    },
-    { 
-      text: "", 
-      type: "angry",
-      img: "img/meme/zloy.jpg"
-    },
-    { 
-      text: "", 
-      type: "happy",
-      img: "img/meme/pedro.jpg"
-    },
-    { 
-      text: "", 
-      type: "annoying",
-      img: "img/meme/cat.png"
-    },
-    { 
-      text: "", 
-      type: "wonder",
-      img: "img/meme/joe.png"
-    },
-    { 
-      text: "", 
-      type: "sleepy",
-      img: "img/meme/sleep.jpg"
-    },
-    { 
-      text: "", 
-      type: "creative",
-      img: "img/meme/bob.jpg"
-    },
-    { 
-      text: "", 
-      type: "hoahoahoa",
-      img: "img/meme/egg.jpg"
-    }
-  ]
-}
+    text: "Выбери мем",
+    img: "img/obl/mem.png",
+    options: shuffleArray([
+      { 
+        text: "", 
+        type: "sport",
+        img: "img/meme/press.jpeg" 
+      },
+      { 
+        text: "", 
+        type: "angry",
+        img: "img/meme/zloy.jpg"
+      },
+      { 
+        text: "", 
+        type: "happy",
+        img: "img/meme/pedro.jpg"
+      },
+      { 
+        text: "", 
+        type: "annoying",
+        img: "img/meme/cat.png"
+      },
+      { 
+        text: "", 
+        type: "wonder",
+        img: "img/meme/joe.png"
+      },
+      { 
+        text: "", 
+        type: "sleepy",
+        img: "img/meme/sleep.jpg"
+      },
+      { 
+        text: "", 
+        type: "creative",
+        img: "img/meme/bob.jpg"
+      },
+      { 
+        text: "", 
+        type: "hoahoahoa",
+        img: "img/meme/egg.jpg"
+      }
+    ])
+  }
 ];
 
 const results = {
@@ -287,4 +296,3 @@ function showResult() {
   });
   content.appendChild(restartBtn);
 }
-
