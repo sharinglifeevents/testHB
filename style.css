@@ -137,6 +137,10 @@ body {
 
 .content {
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 }
 
 .content h2 {
@@ -365,4 +369,5 @@ body {
     padding: 10px 12px;
     font-size: 0.85em;
   }
+
 }
