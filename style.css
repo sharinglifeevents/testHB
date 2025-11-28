@@ -1,0 +1,368 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #2d1b69 0%, #1a1033 100%);
+  color: #e2d9f3;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.btn {
+  background: #7e57c2;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  background: #9575cd;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(126, 87, 194, 0.4);
+}
+
+.btn.primary {
+  background: #9c27b0;
+  box-shadow: 0 2px 8px rgba(156, 39, 176, 0.3);
+}
+
+.btn.primary:hover {
+  background: #ab47bc;
+  box-shadow: 0 4px 16px rgba(156, 39, 176, 0.5);
+}
+
+.start-screen {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+  background: rgba(45, 27, 105, 0.8);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(126, 87, 194, 0.2);
+}
+
+.start-screen h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #ab47bc, #7e57c2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.start-screen .lead {
+  font-size: 1.1em;
+  margin: 25px 0;
+  color: #d1c4e9;
+}
+
+.start-screen .image {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 20px auto;
+  border: 2px solid #7e57c2;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card {
+  max-width: 800px;
+  margin: 20px auto;
+  background: rgba(45, 27, 105, 0.9);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(126, 87, 194, 0.3);
+}
+
+.top-row {
+  padding: 20px;
+  background: rgba(26, 16, 51, 0.8);
+  border-bottom: 1px solid rgba(126, 87, 194, 0.2);
+}
+
+.counter {
+  font-size: 1em;
+  color: #b39ddb;
+  font-weight: 600;
+  text-align: center;
+}
+
+#cardImage {
+  width: 100%;
+  height: 330px; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  max-width: 500px;
+
+  object-fit: contain;
+  border-radius: 15px;
+  margin: 20px auto;
+  border: 2px solid #7e57c2;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+#cardImage::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(transparent, rgba(45, 27, 105, 0.8));
+}
+
+.content {
+  padding: 30px;
+}
+
+.content h2 {
+  font-size: 1.4em;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #e2d9f3;
+  font-weight: 600;
+}
+
+
+.options-container {
+  margin-top: 20px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option {
+  background: rgba(126, 87, 194, 0.2);
+  border: 2px solid rgba(126, 87, 194, 0.4);
+  color: #e2d9f3;
+  padding: 16px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1em;
+  text-align: left;
+}
+
+.option:hover {
+  background: rgba(126, 87, 194, 0.4);
+  border-color: #7e57c2;
+  transform: translateX(5px);
+}
+
+.meme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.meme-option {
+  background: rgba(126, 87, 194, 0.2);
+  border: 2px solid rgba(126, 87, 194, 0.4);
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+}
+
+.meme-option:hover {
+  background: rgba(126, 87, 194, 0.4);
+  border-color: #7e57c2;
+  transform: scale(1.05);
+}
+
+.meme-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.result-title {
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #ab47bc, #7e57c2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.result-text {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #d1c4e9;
+  line-height: 1.8;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    max-width: 90%;
+  }
+  
+  #cardImage {
+    height: 300px; 
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .start-screen {
+    margin: 20px auto;
+    padding: 30px 20px;
+  }
+  
+  .start-screen h1 {
+    font-size: 2em;
+  }
+  
+  .card {
+    margin: 10px auto;
+    border-radius: 15px;
+  }
+  
+  .content {
+    padding: 20px 15px;
+  }
+  
+  #cardImage {
+    height: 250px; /* Уменьшаем для мобильных, но все равно больше чем было */
+  }
+  
+  .content h2 {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+  }
+  
+  .option {
+    padding: 14px 16px;
+    font-size: 0.95em;
+  }
+}
+
+/* Средние мобильные устройства */
+@media (max-width: 600px) {
+  #cardImage {
+    height: 290px;
+  }
+  
+  .meme-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .top-row {
+    padding: 15px;
+  }
+  
+  .content {
+    padding: 15px 12px;
+  }
+}
+
+/* Маленькие мобильные устройства */
+@media (max-width: 480px) {
+  .start-screen h1 {
+    font-size: 1.7em;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  #cardImage {
+    height: 250px; /* Минимальная высота для маленьких экранов */
+  }
+  
+  .content h2 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  
+  .option {
+    padding: 12px 14px;
+    font-size: 0.9em;
+  }
+  
+  .options {
+    gap: 8px;
+  }
+  
+  .result-title {
+    font-size: 1.8em;
+  }
+  
+  .result-text {
+    font-size: 1.1em;
+  }
+  
+  .meme-grid {
+    gap: 10px;
+  }
+  
+  .meme-option {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    padding: 5px;
+  }
+  
+  .start-screen {
+    margin: 10px auto;
+    padding: 20px 15px;
+  }
+  
+  #cardImage {
+    height: 220px;
+  }
+  
+  .content h2 {
+    font-size: 1.1em;
+  }
+  
+  .option {
+    padding: 10px 12px;
+    font-size: 0.85em;
+  }
+}
