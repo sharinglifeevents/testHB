@@ -6,7 +6,7 @@ const questions = [
       { text: "Можно горы свернуть, или хотя бы посуду помыть очень энергично", type: "sport" },
       { text: "Лучше не подходи, не трогай и не дыши в мою сторону", type: "angry" },
       { text: "Happy happy happy", type: "happy" },
-      { text: "Хочется до кого-нибудь докопаться", type: "annoying" },
+      { text: "ХХочется сделать какую-нибудь пакость", type: "annoying" },
       { text: "Твой шок в шоке от окружающий тебя событий", type: "wonder" },
       { text: "Мозг отключился, единственная цель — добраться до подушки", type: "sleepy" },
       { text: "Бараш позавидует твоему вдохновению и желанию творить", type: "creative" },
@@ -287,3 +287,4 @@ function showResult() {
   });
   content.appendChild(restartBtn);
 }
+
